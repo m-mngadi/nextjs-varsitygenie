@@ -12,7 +12,7 @@ export default function HomePage() {
           <div className="absolute top-0 left-0 z-10 max-h-[450px] h-full w-full">
             <div className="flex flex-col justify-center h-full w-full">
               <p className="text-white font-medium px-6 md:px-16">
-                At <span className="text-orange-600">VarsityGenie</span> we are all about self-development and community engagement. We aim to empower others for the betterment of our future and future generations. "We live by the motto <span className="text-orange-600 underline">“Paying it forward".</span>
+                At <span className="text-orange-600">VarsityGenie</span> we are all about self-development and community engagement. We aim to empower others for the betterment of our future and future generations. We live by the motto <span className="text-orange-600 underline">Paying it forward.</span>
               </p>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import GuruTile, { GuruType } from "@/components/GuruTile";
-
 const gurus = [
     {
         id : "01",
@@ -48,7 +47,7 @@ const gurus = [
 export default function GurusPage() {
     return (
         <main className="flex flex-col min-h-screen">
-            <section className="w-screen min-h-screen bg-[#E84100] max-w-7xl mx-auto">
+            <section className="w-full min-h-screen bg-[#E84100] max-w-7xl mx-auto">
                 <div className="grid grid-flow-row auto-rows-max my-6">
                     <div className="flex flex-col px-6 md:px-16 gap-2">
                         <h1 className="text-center text-3xl font-bold text-[#1E1E1E]">The tale of the <span className="text-white font-semibold underline">VasityGenie Gurus</span></h1>
@@ -66,10 +65,10 @@ export default function GurusPage() {
                     </div>
 
                     <div className="bg-[#E84100] min-h-screen">
-                        <div className="grid grid-cols-1s md:grid-cols-2 lg:grid-cols-3 gap-4 xl:grid-cols-4 my-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 xl:grid-cols-4 my-3">
                             {
                                 gurus.map((guru: GuruType) => (
-                                    <GuruTile key={guru.id} name={guru.name} headline={guru.headline} bio={guru.bio} img_url={guru.img_url} />
+                                    <GuruTile key={guru.id} name={guru.name} headline={guru.headline} bio={guru.bio} img_url="/images/guru.jpg" />
                                 ))
                             }
                         </div>

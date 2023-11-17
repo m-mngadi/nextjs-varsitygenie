@@ -9,7 +9,7 @@ const news = [
     },
     {
         title: "VarsityGenie Values Impact Story: Siphesihle Sephaka",
-        overview: "1. Please tell us about yourself I am Siphesihle Sephaka doing my third year in ICT (Applications Development) at the Durban University...",
+        overview: "1. Please tell us about yourself I am Siphesihle Sephaka doing my third year in ICT (Applications Development) at the Durban University, 1. Please tell us about yourself I am Siphesihle Sephaka doing my third year in ICT (Applications Development) at the Durban University",
         date: "11 October 2023",
     },
     {
@@ -31,18 +31,20 @@ export default function NewsPage() {
                         <p className="text-base font-semibold text-white">Keep up with our latest stories</p>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center bg-white min-h-[60px]">
-                    <div className="flex justify-end mx-4">
-                        <input className="form-control w-full md:max-w-[250px]" type="text" placeholder="Search" />
+                <div className="bg-white">
+                    <div className="flex flex-col justify-center bg-white min-h-[60px]">
+                        <div className="flex justify-end mx-4">
+                            <input className="form-control w-full md:max-w-[250px]" type="text" placeholder="Search" />
+                        </div>
                     </div>
-                </div>
-                <div className="grid grid-cols-1 grid-flow-row auto-rows-max md:grid-cols-2 md:gap-3 px-4 bg-white min-h-screen">
-                    {/* News bulletins here */}
-                    {
-                        news.map((bulletin: NewsBulletinType) => (
-                            <NewsBulletin key={bulletin.title} title={bulletin.title} overview={bulletin.overview} date={bulletin.date} />
-                        ))
-                    }
+                    <div className="grid grid-cols-1 grid-flow-row auto-rows-max md:grid-cols-2 gap-4 px-4 bg-white min-h-screen py-4">
+                        {/* News bulletins here */}
+                        {
+                            news.map((bulletin: NewsBulletinType) => (
+                                <NewsBulletin key={bulletin.title} title={bulletin.title} overview={bulletin.overview} date={bulletin.date} />
+                            ))
+                        }
+                    </div>
                 </div>
             </section>
         </main>

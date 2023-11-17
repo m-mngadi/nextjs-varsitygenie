@@ -3,12 +3,12 @@ import CommunityTile, { CommunityType } from "@/components/CommunityTile";
 const communities = [
     {
         title : "GDG Cloud Durban",
-        description : "GDG Cloud Durban promote cloud technology awareness and knowledge sharing - we thrive on synaptic experiences to drive innovation. The aim of this group is to spark innovation, create incredible conversations and drive local businesses and individuals to think differently. Regular meetings are held to discuss amazing new and existing available cloud technologies which are available to individuals and businesses. Guest speakers are welcome to discuss their cloud technology experiences, successes and challenge.",
+        description : "GDG Cloud Durban promote cloud technology awareness and knowledge sharing - we thrive on synaptic experiences to drive innovation.",
         img_url : "01"
     },
     {
         title : "Power Platform Jukies",
-        description : "​A group of Power BI, Power Apps and Power Automate enthusiasts with shared goal of discussing, learning and enriching, enabling experiences.",
+        description : "A group of Power BI, Power Apps and Power Automate enthusiasts with shared goal of discussing, learning and enriching, enabling experiences.",
         img_url : "02"
     },
 ]

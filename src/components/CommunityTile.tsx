@@ -11,8 +11,8 @@ export default function CommunityTile({ title, description, img_url }: Community
                 <div className="basis-1/3">01</div>
                 <div className="basis-2/3">
                     <div className="flex flex-col h-full">
-                        <h1 className="flex font-bold text-2xl text-[#1E1E1E]">{title}</h1>
-                        <p className="block font-lighter text-[#1E1E1E] line-clamp-5 ">{description}</p>
+                        <h1 className="flex font-bold lg:text-2xl md:text-lg text-md text-[#1E1E1E]">{title}</h1>
+                        <p className="block font-lighter text-[#1E1E1E] line-clamp-4 ">{description}</p>
                     </div>
                 </div>
             </div>

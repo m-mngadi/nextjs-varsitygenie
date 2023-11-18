@@ -40,7 +40,7 @@ export default function Navbar() {
 
     return (
         <nav className={clsx("flex flex-col md:flex-row justify-between md:justify-normal w-full px-2 md:px-6 bg-white z-10 relative top-0", {
-            "group is-expanded h-screen": isExpanded,
+            "group is-expanded h-full": isExpanded,
             "": !isExpanded,
         })}>
             <div className="flex justify-between">

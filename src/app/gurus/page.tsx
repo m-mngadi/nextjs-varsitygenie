@@ -64,7 +64,7 @@ export default function GurusPage() {
                 </div>
 
                 <div className="bg-[#E84100] min-h-screen">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 xl:grid-cols-4 my-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 my-3">
                         {
                             gurus.map((guru: GuruType) => (
                                 <GuruTile key={guru.id} name={guru.name} headline={guru.headline} bio={guru.bio} img_url="/images/guru.jpg" />

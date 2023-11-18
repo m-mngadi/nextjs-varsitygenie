@@ -23,7 +23,7 @@ export default function AppContext({
   const pathname = usePathname();
 
   useEffect(()=> {
-    if (orientation.angle === 90) {
+    if (orientation.angle === 90 || orientation.angle === 180) {
       setExpanded(false);
     }
   }, [orientation]);

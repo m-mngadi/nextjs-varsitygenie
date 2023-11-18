@@ -52,7 +52,7 @@ export default function Navbar() {
                     {isExpanded ? <MdClose size={32} /> : <MdMenu size={32} />}
                 </div>
             </div>
-            <div className="hidden group-[.is-expanded]:flex md:flex flex-col md:flex-row justify-between grow">
+            <div className="hidden group-[.is-expanded]:flex md:flex flex-col md:flex-row justify-start grow">
                 <ul className="flex flex-col md:flex-row items-center divide-y md:divide-y-0 divide-slate-700">
                     {
                         menuItems.map((item) => (

@@ -1,7 +1,7 @@
 export default function SingleGuruPage() {
     return (
-        <main className="flex min-h-screen flex-col p-12">
+        <section className="w-screen min-h-screen bg-[#E84100] max-w-7xl mx-auto">
             SingleGuruPage
-        </main>
+        </section>
     )
 }

@@ -3,10 +3,6 @@ import { Inter } from 'next/font/google'
 import AppContext from '@/components/AppContext'
 import './globals.css'
 
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
-
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -21,14 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " max-w-7xl mx-auto bg-[#1E1E1E] overscroll-x-none"}>
-        <AppContext>
-          <Navbar />
-          {children}
-          <Footer />
-        </AppContext>
-      </body>
-
+      <AppContext font={inter.className}>
+        {children}
+      </AppContext>
     </html>
   )
 }

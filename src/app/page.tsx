@@ -7,7 +7,7 @@ export default function HomePage() {
       <section className="w-screen min-h-screen bg-[#E84100] max-w-7xl mx-auto">
         <div className="relative">
           <div className="max-h-[450px] overflow-clip z-0">
-            <Image className="md:-translate-y-[8rem] w-full" src={teamPicture} alt="Varsity Genie Team" />
+            <Image className="md:-translate-y-[8rem] w-full" src={teamPicture} alt="Varsity Genie Team" priority={true}/>
           </div>
           <div className="absolute top-0 left-0 z-10 max-h-[450px] h-full w-full">
             <div className="flex flex-col justify-center h-full w-full">

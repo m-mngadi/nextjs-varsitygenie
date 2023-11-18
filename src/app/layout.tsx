@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import AppContext from '@/components/AppContext'
 import './globals.css'
 
 import Navbar from "@/components/Navbar"
@@ -21,10 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + " max-w-7xl mx-auto bg-[#1E1E1E] overscroll-x-none"}>
-        <Navbar />
-        {children}
-        <Footer />
-        </body>
+        <AppContext>
+          <Navbar />
+          {children}
+          <Footer />
+        </AppContext>
+      </body>
+
     </html>
   )
 }

@@ -4,8 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx"
 
-import { MdOutlineLogin, MdMenu, MdClose } from "react-icons/md";
+import { MdOutlineLogin, MdMenu, MdClose, MdOutlineLogout } from "react-icons/md";
 import { useEffect, useState } from "react";
+import { signOut, useSession } from "next-auth/react";
 
 const menuItems = [
     {
@@ -30,6 +31,9 @@ export default function Navbar() {
     const pathname = usePathname();
     const [navExpanded, setNavExpanded] = useState(false);
 
+    const session = useSession();
+    const { status } = session;
+
     useEffect(() => {
         setNavExpanded(false);
     }, [pathname]);
@@ -41,7 +45,7 @@ export default function Navbar() {
         })}>
             <div className="flex justify-between">
                 <Link href="/">
-                    <Image src="/images/logo.png" width={68} height={68} alt="Varsity Genie logo" />
+                    <Image src="/images/logo.png" width={68} height={68} alt="Varsity Genie logo" priority={true} />
                 </Link>
                 <div className="flex items-center hover:cursor-pointer px-4 md:hidden text-[#E84100]"
                     onClick={() => setNavExpanded(!navExpanded)}>
@@ -63,14 +67,23 @@ export default function Navbar() {
                         ))
                     }
                 </ul>
-                <div className="flex justify-center">
-                    <Link className="flex flex-end items-center hover:cursor-pointer px-4" href="#">
-                        <MdOutlineLogin size={24} />
-                        <span className="text-xl text-gray-950">Login</span>
-                    </Link>
-                </div>
+                {(status === 'unauthenticated' && pathname !== "/login") ? (
+                    <div className="flex justify-center">
+                        <Link className="flex flex-end items-center hover:cursor-pointer px-4" href="/login">
+                            <MdOutlineLogin size={24} />
+                            <span className="text-xl text-gray-950">Login</span>
+                        </Link>
+                    </div>
+                ) : null } 
+                {(status === 'authenticated') && (
+                    <div className="flex justify-center">
+                        <button className="flex flex-end items-center hover:cursor-pointer px-4" onClick={() => signOut({ callbackUrl: "/" })}>
+                            <MdOutlineLogout size={24} />
+                            <span className="text-xl text-gray-950">Logout</span>
+                        </button>
+                    </div>
+                )}
             </div>
-
         </nav>
     )
 }

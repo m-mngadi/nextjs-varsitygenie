@@ -77,7 +77,7 @@ export default function Navbar() {
                 ) : null } 
                 {(status === 'authenticated') && (
                     <div className="flex justify-center">
-                        <button className="flex flex-end items-center hover:cursor-pointer px-4" onClick={() => signOut({ callbackUrl: "/" })}>
+                        <button className="flex flex-end items-center hover:cursor-pointer px-4" onClick={() => signOut({ callbackUrl: "/login" })}>
                             <MdOutlineLogout size={24} />
                             <span className="text-xl text-gray-950">Logout</span>
                         </button>
